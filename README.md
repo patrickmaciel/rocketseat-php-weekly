@@ -16,4 +16,7 @@ php artisan migrate:fresh --seed
 composer require livewire/livewire
 php artisan livewire:layout
 
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
 ```

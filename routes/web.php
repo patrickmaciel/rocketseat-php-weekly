@@ -1,12 +1,7 @@
 <?php
 
-use App\Livewire\Projects\Index;
-use App\Livewire\Projects\Proposals;
-use App\Livewire\Projects\Show;
+use App\Http\Controllers\ProjectsController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', Index::class)->name('projects.index');
-
-Route::get('/project/{project}', Show::class)->name('projects.show');
-Route::get('/project/{project}/proposals', Proposals::class)->name('projects.proposals');
-
+Route::get('/', [ProjectsController::class, 'index'])->name('projects.index');
+Route::get('/project/{project}', [ProjectsController::class, 'show'])->name('projects.show');
